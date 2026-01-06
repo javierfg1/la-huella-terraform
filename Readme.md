@@ -53,13 +53,20 @@ Tras hacer esto, puedes arreglar tu identidad para este commit con:
  create mode 100644 backend.tf
  create mode 100644 providers.tf
 
+ # Creamos el repositorio en github
+
+ https://github.com/javierfg1/la-huella-terraform.git
+
+ git remote add origin https://github.com/javierfg1/la-huella-terraform.git
+
+ 
  # Push
 
 git add .
      o
 git add .github/workflows/la-huella-wf.yaml 
      o
-git add README.md
+git add Readme.md
 git commit -m "Terraform remote state with LocalStack"
 git push origin main
 
