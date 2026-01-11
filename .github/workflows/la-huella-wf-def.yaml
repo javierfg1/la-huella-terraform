@@ -71,7 +71,8 @@ jobs:
 
       - name: Inicalización de recursos (solo si es necesario)
         run: |
-          /scripts/init.sh
+          chmod +x scripts/init.sh
+          ./scripts/init.sh
 
       - name: Trigger application deploy workflow
         env:
