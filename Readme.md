@@ -991,8 +991,26 @@ secrets.GH_APP_TOKEN es una variable secreta del repo u organización.
 
     # Actualizar los repos
 
-    git remote set-url origin git@github.com:la-huella/la-huella-terraform.git.git
+    git remote set-url origin git@github.com:la-huella/la-huella-terraform.git
     git remote set-url origin git@github.com:la-huella/eu-devops-7-la-huella-main-etapa4.git
+
+    Al hacer push me daba:
+
+    error: GH013: Repository rule violations found for refs/heads/main.
+        remote: 
+        remote: - GITHUB PUSH PROTECTION
+        remote:   —————————————————————————————————————————
+        remote:     Resolve the following violations before pushing again
+        remote: 
+        remote:     - Push cannot contain secrets
+
+    He permitido el secret desde la siguiente url, auque no es la solución adecuada:
+
+    https://github.com/la-huella/la-huella-terraform/security/secret-scanning/unblock-secret/387j5VxDVED8XRi86kIKK9a3bJ0
+
+    
+
+
 
 
         
