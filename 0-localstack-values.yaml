@@ -1,0 +1,35 @@
+image:
+  repository: localstack/localstack
+  tag: latest
+
+# Variables de entorno de LocalStack
+env:
+  SERVICES: s3,dynamodb,sqs,cloudwatch
+  DEBUG: "1"
+  HOSTNAME_EXTERNAL: midominio.local
+  CORS_ALLOW_ORIGIN: "*"
+  DEFAULT_REGION: us-east-1
+
+# Service interno (el Ingress apuntará aquí)
+service:
+  type: ClusterIP
+  port: 4566
+  targetPort: 4566
+
+# Persistencia (opcional pero recomendable)
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 5Gi
+  mountPath: /var/lib/localstack
+
+# Recursos (ajusta si es necesario)
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+
