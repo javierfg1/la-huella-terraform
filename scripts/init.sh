@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Script para insertar datos de ejemplo en LocalStack para La Huella
 # Este script debe ejecutarse después de crear los recursos básicos
 
