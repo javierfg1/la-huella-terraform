@@ -54,7 +54,7 @@ jobs:
       - name: Instalar Ingress para LocalStack
         run: kubectl apply -f 0-ingress-localstack.yaml -n mission7
 
-        name: Crear Terraform state bucket (si no existe)
+      - name: Crear Terraform state bucket (si no existe)
         run: |
           aws s3 mb s3://la-huella-remote-state \
             --endpoint-url=$LOCALSTACK_ENDPOINT || true
